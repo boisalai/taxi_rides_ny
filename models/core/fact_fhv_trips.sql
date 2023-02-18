@@ -18,7 +18,8 @@ select
     fhv_data.SR_Flag,
     fhv_data.Affiliated_base_number 
 from {{ ref('stg_fhv_tripdata') }} as fhv_data
-inner join dim_zones as pickup_zone
-on fhv_data.pickup_locationid = pickup_zone.locationid
-inner join dim_zones as dropoff_zone
-on fhv_data.dropoff_locationid = dropoff_zone.locationid
+
+-- inner join dim_zones as pickup_zone
+-- on fhv_data.pickup_locationid = pickup_zone.locationid
+-- inner join dim_zones as dropoff_zone
+-- on fhv_data.dropoff_locationid = dropoff_zone.locationid
